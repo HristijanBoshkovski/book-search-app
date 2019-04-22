@@ -1,0 +1,90 @@
+body.light-mode {
+    background-color: #eee;
+  }
+  
+  body.dark-mode {
+    background-color: #1c1e20;
+    color: #dfdfdf;
+  
+    .dark-mode-toggle > button {
+      color: #999;
+      &:last-child {
+        color: lightblue;
+      }
+    }
+  
+    form {
+      background-color: #1c1e20;
+    }
+  
+    footer {
+      color: aquamarine;
+    }
+  }
+  
+  .dark-mode-toggle {
+    display: flex;
+    justify-content: center;
+    margin-right: 27px;
+  
+    & > button {
+      padding: 0;
+      margin: 0;
+      font-size: 1em;
+      background: none;
+      border: none;
+      color: #e80d0d;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      &:last-child {
+        color: #666;
+      }
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  
+  .toggle-control {
+    position: relative;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type='checkbox'].dmcheck {
+    width: 30px;
+    height: 10px;
+    background: #555;
+    position: relative;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    vertical-align: 2px;
+    outline: none;
+  
+    &:checked + label {
+      left: 20px;
+    }
+  
+    &:focus-visible {
+      outline: solid 2px white;
+    }
+  
+    & + label {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: absolute;
+      left: 2px;
+      background: #fff;
+      opacity: 0.9;
+      background-color: lightgray;
+    }
+  }
